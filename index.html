@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="vi"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0, minimum-scale=1, maximum-scale=1">
+        <title>MyGenshinTeam</title>
+        <link rel = "shortcut icon" href="/assets/img/Fonts/genshinIcon.png">
+        <link rel = "stylesheet" type="text/css" href="/assets/css/lightslider.css">
+        <link rel = "stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family= Signika|Roboto Slab|Moon Dance|Licorice|Pacifico|Lobster">
+        <script type="text/javascript" src="/assets/js/Jquery.js"></script>
+        <script type="text/javascript" src="/assets/js/lightslider.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <!--        Header and Banner       -->
+        <section>
+            <div class="background"></div>
+            <header>
+                <a href="#" class="logo">MyGenshinTeam</a>
+                <ul class="navigation navigation-mobile">
+                    <li class=" list active"><a href="#">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="text">Trang chủ</span>
+                    </a></li>
+                    <li class="list"><a href="#character">
+                        <span class="icon"><i class="fas fa-male"></i></span>
+                        <span class="text">Nhân vật</span>
+                    </a></li>
+                    <li class="list"><a href="#team">
+                        <span class="icon"><i class="fas fa-users"></i></span>
+                        <span class="text">Đội hình</span>
+                    </a></li>
+                    <div class="indicator"></div>
+                </ul>
+                <div id="toggleMusic" class="playbtn">
+                    <div class="togButton">
+                        <!-- <i class="fas fa-music"></i> -->
+                        <audio id="song" src="/assets/music/song1.mp3"></audio>
+                    </div>
+                </div>
+            </header>
+            <div class="banner-content">
+                <div class="textBox">
+                    <h2>Cùng khám phá Genshin Impact!</h2>
+                    <p>Chào mừng đến với Website của mình. Tại website này mình sẽ giới thiệu 
+                        về nhân vật, thế giới, cách nâng nhân vật, đội hình,... theo quan điểm cá nhân của mình nha. 
+                        Cảm ơn các bạn đã ghé thăm!
+                    </p>
+                </div>
+                <div class="ImgBox">
+                    <img src="/assets/img/Characters/Splash_Bennett.png" class="characters-banner">
+                </div>
+            </div>
+
+            <ul class="thumb">
+                <li data-text="Bennett" class="active"><img src="/assets/img/Characters/HalfBody_Bennett.png" onclick="imgSlider('/assets/img/Characters/Splash_Bennett.png'); changeBgColor('#f6546a')"></li>
+                <li data-text="Zhongli"><img src="/assets/img/Characters/HalfBody_Zhongli.png" onclick="imgSlider('/assets/img/Characters/Splash_Zhongli.png'); changeBgColor('#ffd700')"></li>
+                <li data-text="Venti"><img src="/assets/img/Characters/HalfBody_Venti.png" onclick="imgSlider('/assets/img/Characters/Splash_Venti.png'); changeBgColor('#40e0d0')"></li>
+                <li data-text="Raiden Shogun"><img src="/assets/img/Characters/HalfBody_Raiden.png" onclick="imgSlider('/assets/img/Characters/Splash_Raiden.png'); changeBgColor('#993299')"></li>
+                <li data-text="Tartaglia"><img src="/assets/img/Characters/HalfBody_Childe.png" onclick="imgSlider('/assets/img/Characters/Splash_Tartaglia.png'); changeBgColor('#2d89e5')"></li>
+                <li data-text="Ganyu"><img src="/assets/img/Characters/HalfBody_Ganyu.png" onclick="imgSlider('/assets/img/Characters/Splash_Ganyu.png'); changeBgColor('#2acaea')"></li>
+            </ul>
+        </section>
+        <!--        Header and Banner       -->
+
+        <!--        Character Section       -->
+        <div id="character" class="char-section">
+            <div class="char-heading">
+                <h2>Nhân vật hiện có</h2>
+            </div>
+
+            <div class="char-slider">
+                <ul id="autoWidth" class="cs-hidden">
+                    <li class="item-a">
+                        <div class="char-box">
+                            <p class="country">MONDSTADT</p>
+                            <img src="/assets/img/Characters/Body_Diluc.png" class="char-img">
+                            <p class="char-name">Diluc Ragnvindr</p>
+                            <div class="weapon-type">
+                                <img src="/assets/img/Weapons/Icon_Claymore.png">
+                            </div>
+                            <div class="element-type">
+                                <img src="/assets/img/Elements/Pyro.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="char-box">
+                            <p class="country">MONDSTADT</p>
+                            <img src="/assets/img/Characters/Body_Jean.png" class="char-img">
+                            <p class="char-name">Jean Gunnhildr</p>
+                            <div class="weapon-type">
+                                <img src="/assets/img/Weapons/Icon_Sword.png">
+                            </div>
+                            <div class="element-type">
+                                <img src="/assets/img/Elements/Anemo.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="char-box">
+                            <p class="country">MONDSTADT</p>
+                            <img src="/assets/img/Characters/Body_Mona.png" class="char-img">
+                            <p class="char-name">Mona Megistus</p>
+                            <div class="weapon-type">
+                                <img src="/assets/img/Weapons/Icon_Catalyst.png">
+                            </div>
+                            <div class="element-type">
+                                <img src="/assets/img/Elements/Hydro.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="char-box">
+                            <p class="country">MONDSTADT</p>
+                            <img src="/assets/img/Characters/Body_Bennett.png" class="char-img">
+                            <p class="char-name">Bennett</p>
+                            <div class="weapon-type">
+                                <img src="/assets/img/Weapons/Icon_Sword.png">
+                            </div>
+                            <div class="element-type">
+                                <img src="/assets/img/Elements/Pyro.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="char-box">
+                            <p class="country">LIYUE</p>
+                            <img src="/assets/img/Characters/Body_Ganyu.png" class="char-img">
+                            <p class="char-name">Ganyu</p>
+                            <div class="weapon-type">
+                                <img src="/assets/img/Weapons/Icon_Bow.png">
+                            </div>
+                            <div class="element-type">
+                                <img src="/assets/img/Elements/Cryo.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="char-box">
+                            <p class="country">INAZUMA</p>
+                            <img src="/assets/img/Characters/Body_Raiden.png" class="char-img">
+                            <p class="char-name">Raiden Shogun</p>
+                            <div class="weapon-type">
+                                <img src="/assets/img/Weapons/Icon_Polearm.png">
+                            </div>
+                            <div class="element-type">
+                                <img src="/assets/img/Elements/Electro.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="char-box">
+                            <p class="country">LIYUE</p>
+                            <img src="/assets/img/Characters/Body_Zhongli.png" class="char-img">
+                            <p class="char-name">Zhongli</p>
+                            <div class="weapon-type">
+                                <img src="/assets/img/Weapons/Icon_Polearm.png">
+                            </div>
+                            <div class="element-type">
+                                <img src="/assets/img/Elements/Geo.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="char-box">
+                            <p class="country">MONDSTADT</p>
+                            <img src="/assets/img/Characters/Body_Venti.png" class="char-img">
+                            <p class="char-name">Venti</p>
+                            <div class="weapon-type">
+                                <img src="/assets/img/Weapons/Icon_Bow.png">
+                            </div>
+                            <div class="element-type">
+                                <img src="/assets/img/Elements/Anemo.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="char-box">
+                            <p class="country">SNEZHNAYA</p>
+                            <img src="/assets/img/Characters/Body_Childe.png" class="char-img">
+                            <p class="char-name">Tartaglia</p>
+                            <div class="weapon-type">
+                                <img src="/assets/img/Weapons/Icon_Bow.png">
+                            </div>
+                            <div class="element-type">
+                                <img src="/assets/img/Elements/Hydro.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="char-box">
+                            <p class="country">MONDSTADT</p>
+                            <img src="/assets/img/Characters/Body_Diona.png" class="char-img">
+                            <p class="char-name">Diona</p>
+                            <div class="weapon-type">
+                                <img src="/assets/img/Weapons/Icon_Bow.png">
+                            </div>
+                            <div class="element-type">
+                                <img src="/assets/img/Elements/Cryo.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="char-box">
+                            <p class="country">LIYUE</p>
+                            <img src="/assets/img/Characters/Body_Xiangling.png" class="char-img">
+                            <p class="char-name">Xiangling</p>
+                            <div class="weapon-type">
+                                <img src="/assets/img/Weapons/Icon_Polearm.png">
+                            </div>
+                            <div class="element-type">
+                                <img src="/assets/img/Elements/Pyro.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="char-box">
+                            <p class="country">LIYUE</p>
+                            <img src="/assets/img/Characters/Body_Xingqiu.png" class="char-img">
+                            <p class="char-name">Xingqiu</p>
+                            <div class="weapon-type">
+                                <img src="/assets/img/Weapons/Icon_Sword.png">
+                            </div>
+                            <div class="element-type">
+                                <img src="/assets/img/Elements/Hydro.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="char-box">
+                            <p class="country">LIYUE</p>
+                            <img src="/assets/img/Characters/Body_Hutao.png" class="char-img">
+                            <p class="char-name">Hu Tao</p>
+                            <div class="weapon-type">
+                                <img src="/assets/img/Weapons/Icon_Polearm.png">
+                            </div>
+                            <div class="element-type">
+                                <img src="/assets/img/Elements/Pyro.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="char-box">
+                            <p class="country">INAZUMA</p>
+                            <img src="/assets/img/Characters/Body_Kazuha.png" class="char-img">
+                            <p class="char-name">Kaedehara Kazuha</p>
+                            <div class="weapon-type">
+                                <img src="/assets/img/Weapons/Icon_Sword.png">
+                            </div>
+                            <div class="element-type">
+                                <img src="/assets/img/Elements/Anemo.png">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--        Character Section       -->
+
+        <!--        Team Section        -->
+        <div id="team" class="team-section">
+            <div class="team-heading">
+                <h2>Đội hình hiện có</h2>
+            </div>
+            <div class="team-wrapper">
+                <div class="team-name">Childe International</div>
+                <div class="team-content_1">
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Tartaglia.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/SkywardHarp.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>2</p>
+                            <img src="/assets/img/Artifacts/HoTD.png">
+                            <img src="/assets/img/Artifacts/NO.png">
+                        </div>
+                    </div>
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Xiangling.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/DragonBane.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>4</p>
+                            <img src="/assets/img/Artifacts/CWoF.png">
+                        </div>
+                    </div>
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Kazuha.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/IronSting.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>4</p>
+                            <img src="/assets/img/Artifacts/VV.png">
+                        </div>
+                    </div>
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Bennett.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/FesteringDesire.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>4</p>
+                            <img src="/assets/img/Artifacts/NO.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="char-represent">
+                    <img src="/assets/img/Characters/Splash_Kazuha.png">
+                </div>
+            </div>
+
+            <div class="team-wrapper">
+                <div class="team-name">Raiden National</div>
+                <div class="char-represent">
+                    <img src="/assets/img/Characters/Splash_Xingqiu.png">
+                </div>
+                <div class="team-content_2">
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Shougun.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/TheCatch.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>4</p>
+                            <img src="/assets/img/Artifacts/EoSF.png">
+                        </div>
+                    </div>
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Xiangling.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/DragonBane.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>4</p>
+                            <img src="/assets/img/Artifacts/CWoF.png">
+                        </div>
+                    </div>
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Xingqiu.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/SacrificialSword.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>2</p>
+                            <img src="/assets/img/Artifacts/HoTD.png">
+                            <img src="/assets/img/Artifacts/NO.png">
+                        </div>
+                    </div>
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Bennett.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/FesteringDesire.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>4</p>
+                            <img src="/assets/img/Artifacts/NO.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-wrapper">
+                <div class="team-name">Morgana</div>
+                <div class="team-content_1">
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Mona.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/Widsith.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>4</p>
+                            <img src="/assets/img/Artifacts/EoSF.png">
+                        </div>
+                    </div>
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Ganyu.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/Amos.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>4</p>
+                            <img src="/assets/img/Artifacts/WT.png">
+                        </div>
+                    </div>
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Diona.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/SacrificialBow.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>4</p>
+                            <img src="/assets/img/Artifacts/MB.png">
+                        </div>
+                    </div>
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Venti.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/Stringless.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>4</p>
+                            <img src="/assets/img/Artifacts/VV.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="char-represent">
+                    <img src="/assets/img/Characters/Splash_Mona.png">
+                </div>
+            </div>
+
+            <div class="team-wrapper">
+                <div class="team-name">Hutao Vaporize</div>
+                <div class="char-represent">
+                    <img src="/assets/img/Characters/Splash_Hutao.png">
+                </div>
+                <div class="team-content_2">
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Zhongli.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/FavoniusLance.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>4</p>
+                            <img src="/assets/img/Artifacts/NO.png">
+                        </div>
+                    </div>
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Hutao.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/Homa.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>4</p>
+                            <img src="/assets/img/Artifacts/CWoF.png">
+                        </div>
+                    </div>
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Xingqiu.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/SacrificialSword.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>2</p>
+                            <img src="/assets/img/Artifacts/HoTD.png">
+                            <img src="/assets/img/Artifacts/NO.png">
+                        </div>
+                    </div>
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Diona.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/SacrificialBow.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>4</p>
+                            <img src="/assets/img/Artifacts/MB.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-wrapper">
+                <div class="team-name">Diluc Vaporize</div>
+                <div class="team-content_1">
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Diluc.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/WolfGravestone.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>4</p>
+                            <img src="/assets/img/Artifacts/CWoF.png">
+                        </div>
+                    </div>
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Xingqiu.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/SacrificialSword.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>2</p>
+                            <img src="/assets/img/Artifacts/HoTD.png">
+                            <img src="/assets/img/Artifacts/NO.png">
+                        </div>
+                    </div>
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Kazuha.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/IronSting.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>4</p>
+                            <img src="/assets/img/Artifacts/VV.png">
+                        </div>
+                    </div>
+                    <div class="char-detail">
+                        <div class="char-ava">
+                            <img src="/assets/img/Characters/AvatarIcon_Bennett.png">
+                        </div>
+                        <div class="char-weapon">
+                            <img src="/assets/img/Weapons/FesteringDesire.png">
+                        </div>
+                        <div class="char-artifact">
+                            <p>4</p>
+                            <img src="/assets/img/Artifacts/NO.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="char-represent">
+                    <img src="/assets/img/Characters/Splash_Diluc.png">
+                </div>
+            </div>
+        </div>
+        <!--        Team Section        -->
+
+        <!--        Footer Section      -->
+        <div class="footer">
+            <div  class="btn">Click vào để bất ngờ!</div>
+            <div class="popup">
+                <h2>Cảm ơn bạn đã ghé thăm nhé!
+                    Chúc bạn không bị lệch rate nha!
+                </h2>
+                <b class="close">x</b>
+            </div>
+            <ul>
+                <li><a href="https://www.facebook.com/NgocDung19/"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="https://www.instagram.com/nd.nguyenx/"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://github.com/ndnguyenx"><i class="fab fa-github"></i></a></li>
+            </ul>
+        </div>
+        <!--        Footer Section      -->
+
+
+
+        <script>
+            /* change img onclick */
+            function imgSlider(anything){
+                document.querySelector('.characters-banner').src = anything;
+            }
+
+            /* change background color */
+            function changeBgColor(color){
+                const bg = document.querySelector('.background');
+                bg.style.background = color;
+            }
+
+            /* active class when selected */
+            let e1 = document.querySelectorAll('.thumb li');
+            for (let i=0; i < e1.length; i++){
+                e1[i].onclick = function(){
+                    var c = 0;
+                    while (c < e1.length){
+                        e1[c++].className = 'check';
+                    }
+                    e1[i].className = 'check active';
+                }
+            }
+        </script>
+
+        <script>
+            const toggle = document.getElementById('toggleMusic');
+            
+            
+            toggle.onclick = function(){
+                toggle.classList.toggle('active')
+            }
+        </script>
+
+        <canvas id="my-canvas"></canvas>
+        <script type="text/javascript" src="/assets/js/index.min.js"></script>
+        <script>
+            let btn = document.querySelector('.btn');
+            let popup = document.querySelector('.popup');
+            let close = document.querySelector('.close');
+            let confe = document.querySelector('#my-canvas');
+            
+            btn.onclick = function(){
+                popup.classList.add('active');
+                confe.classList.add('active');
+            }
+            close.onclick = function(){
+                popup.classList.remove('active');
+                confe.classList.remove('active');
+            }
+
+            var confettiSettings = { target: 'my-canvas' };
+            var confetti = new ConfettiGenerator(confettiSettings);
+            confetti.render();
+        </script>
+
+        <script>
+            const list = document.querySelectorAll('.list');
+            function activeLink(){
+                list.forEach((item)=>
+                item.classList.remove('active'));
+                this.classList.add('active');
+            }
+            list.forEach((item)=>
+            item.addEventListener('click',activeLink));
+        </script>
+
+        <script type="text/javascript" src="/assets/js/music-list.js"></script>
+        <script type="text/javascript" src="/assets/js/script_slider.js"></script>
+    </body>
+</html>
